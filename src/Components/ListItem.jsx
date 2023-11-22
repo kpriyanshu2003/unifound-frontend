@@ -33,7 +33,7 @@ const ListItems = (props) => {
     //     console.error("Error fetching data:", error);
     //     setSpinner(false);
     //   });
-  }, [props.section]);
+  }, [props.section]); // eslint-disable-line
   console.log(items);
   return (
     <div className="container">
