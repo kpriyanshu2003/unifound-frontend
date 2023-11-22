@@ -1,0 +1,34 @@
+.searchOuter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.searchBar {
+  border: 1px solid #019aff;
+  width: 50%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  gap: 10px;
+}
+
+.searchBar > input {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: transparent;
+  width: 100%;
+}
+
+::placeholder {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .searchBar {
+    width: 80%;
+  }
+}

@@ -1,0 +1,218 @@
+.lostCard {
+  height: 100%;
+  width: 100%;
+  background-color: #e7f7ff;
+}
+
+.lostContainerOuter {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  
+}
+
+.lostContainer {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.585) 0px 7px 29px 0px;
+  background-color: rgba(255, 255, 255);
+  height: 80%;
+  border-radius: 15px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closeIcon {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+.uploadImg {
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.divider {
+  background: rgb(60, 60, 60);
+  width: 0.5px;
+  height: 100%;
+}
+
+.details {
+  display: grid;
+  place-items: center;
+  padding: 0 20px;
+  width: 50%;
+}
+
+.details > div {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  margin: 15px 0 0 0;
+}
+
+.inputField {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 20px;
+  padding: 2px;
+  margin: 15px;
+  border: none;
+  background-color: rgba(228, 225, 225, 0.466);
+  border-radius: 5px;
+}
+
+.inputField > svg {
+  font-size: larger;
+}
+
+.inputField > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 20px;
+}
+
+.btnGraphic {
+  color: white;
+  font-weight: bold;
+  background: transparent;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btnOuter {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0 20px;
+  outline: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
+}
+
+.bg-grad {
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
+}
+.submitBtn {
+  margin: 10px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.noAppear {
+  appearance: none;
+}
+
+.select {
+  width: 100%;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  text-indent: 10px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #757575;
+}
+
+input::file-selector-button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  margin-right: 10%;
+}
+
+input::file-selector-button:hover {
+  background-color: rgb(108, 165, 141);
+  color: black;
+}
+
+.heading {
+  position: relative;
+  top: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 786px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .titleInfo {
+    font-size: 0.7rem;
+  }
+
+  .lostContainer {
+   flex-direction: column;
+    height: min-content;
+    margin-top: 100px;
+    padding-top: 60px;
+    width: 80vw;
+  }
+
+
+  .fileInput {
+    width: 100%;
+  }
+
+  .uploadImgInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media only screen and (max-width: 971px) {
+
+  .lostContainer {
+    flex-direction: column;
+     height: min-content;
+     margin-top: 40px;
+     margin-bottom: 40px;
+     padding-top: 60px;
+     padding-bottom: 60px;
+    
+   }
+   .lostContainerOuter {
+    height: min-content;
+  }
+
+  .details
+  {
+    width: 80%;
+  };
+}

@@ -1,0 +1,51 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: #959da533 0px 8px 24px;
+  background-color: white;
+}
+
+.navBar > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-size: 90%;
+}
+.title {
+  font-weight: bold;
+  font-size: x-large;
+  color: #019aff;
+  text-decoration: none;
+}
+
+.navItem {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.navItem:hover {
+  color: #019aff;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+ .navBar
+ {
+  font-size:16px;
+  flex-direction: column;
+ }
+ 
+ .navBar > div 
+ {
+  width: 100vw;
+   justify-content: center;
+   margin-top: 8px;
+   padding-top: 20px;
+   border-top: 1px solid grey;
+ }
+ 
+}

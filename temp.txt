@@ -1,0 +1,17 @@
+"_id": "64dd01c026137cb8a6bf2dc5",
+"image": "Upasana",
+"studentName": "Upasana",
+"itemTitle": "Bag",
+"itemDescription": "Bottle green coloured hand bag",
+"contactNo": "9836593625",
+"email": "upasana@gmail.com",
+"lostLocation": "Campus 6, KIIT",
+"lostTime": "16/8/2023",
+"category": "LOST",
+"createdAt": "2023-08-16T17:05:04.853Z",
+"updatedAt": "2023-08-16T17:05:04.853Z",
+"__v": 0
+
+
+lostTime, contactNo : not required
+rename lostLocation -> location
