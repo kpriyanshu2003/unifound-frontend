@@ -74,7 +74,7 @@
   margin-left: 20px;
 }
 
-.div-button {
+/* .div-button {
   background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
   padding: 7px 30px 7px 30px;
   padding: 01% 5%;
@@ -100,6 +100,22 @@
   font-size: 89%;
   text-align: left;
   cursor: pointer;
+} */
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid red;
+}
+
+.button button {
+  /* border: 1px solid blue; */
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 .arrow {
@@ -117,7 +133,14 @@
   .homeContainer_left {
     display: none;
   }
+<<<<<<< HEAD
   
+=======
+
+  .homeScreen > svg {
+    /* display: none; */
+  }
+>>>>>>> b02a50a7d0e8c111b6968ca99280c1c3d46e06c1
   .homeContainer_right > img:nth-child(2) {
     margin: 0 0 25px 0;
     min-width: 110%;
