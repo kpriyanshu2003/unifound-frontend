@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import "../styles/Home.css";
-import img from "../assets/l&f.png";
 import { Link } from "react-router-dom";
-import homeImage from "../assets/Group.png";
-import IoTlogo from "../assets/logo.jpg";
+
+import img from "../assets/l&f.png";
+import "../styles/Home.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
 const HomeCard = () => {
@@ -13,25 +12,67 @@ const HomeCard = () => {
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyPress);
-    return () => {
-      document.removeEventListener("keydown", handleKeyPress);
-    };
+    return () => document.removeEventListener("keydown", handleKeyPress);
   }, []);
 
   return (
     <div className="homeContainer">
       <div className="homeContainer_left">
-        <img src={img} width="90%" draggable="false" alt="Card" />
+        <img
+          src={img}
+          width="100%"
+          draggable="false"
+          alt="person-searching-something"
+        />
       </div>
       <div className="homeContainer_right">
-        <img src={IoTlogo} width="10%" draggable="false" alt="Card" />
-        <img src={homeImage} width="100%" draggable="false" alt="Card " />
-        <div className="div-button">
-          <Link to="/lost" style={{ textDecoration: "none" }}>
-            <button className="button">
+        <div>
+          <div
+            style={{
+              fontSize: "60px",
+              fontFamily: "Times New Roman",
+              borderBottom: "2px solid gray",
+            }}
+          >
+            <span
+              style={{
+                color: "#019aff",
+              }}
+            >
+              F
+            </span>
+            <span>rom</span>
+            <br />
+            <span>Lost to Found</span>
+          </div>
+          <div
+            style={{
+              textTransform: "uppercase",
+              letterSpacing: "8px",
+            }}
+          >
+            It's a journey
+          </div>
+          <div
+            style={{
+              margin: "10px 0",
+            }}
+          >
+            A web application focused on listing lost and found items around the
+            college campus.
+          </div>
+        </div>
+
+        <div className="button">
+          <Link to="/lost">
+            <button
+              style={{
+                fontFamily: "verdana",
+              }}
+            >
               Let's Get Started
-              <KeyboardDoubleArrowRightIcon className="arrow" />
             </button>
+            <KeyboardDoubleArrowRightIcon className="arrow" />
           </Link>
         </div>
       </div>
