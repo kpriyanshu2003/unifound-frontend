@@ -118,10 +118,6 @@
     display: none;
   }
   
-  .homeScreen > svg
-  {
-    /* display: none; */
-  }
   .homeContainer_right > img:nth-child(2) {
     margin: 0 0 25px 0;
     min-width: 110%;
