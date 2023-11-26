@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className="homeScreen">
      <HomeCard />
-      <Wave />
+      {/* <Wave /> */}
     </div>
   );
 };
