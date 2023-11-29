@@ -1,10 +1,10 @@
 # Finding Nemo
 
-A well built web application for the students of Kiit University which acts as a LOST & FOUND APP.
+A well-built web application for the students of a University that acts as a LOST & FOUND APP.
 
-🔹Users can upload item images and file in a lost report.
+🔹Users can upload item images and files in a lost report.
 
-🔹Users can search if someone found their lost item anywhere in the campus
+🔹Users can search if someone found their lost item anywhere on the campus
 
 🔹Users can claim such an item.
 
@@ -51,7 +51,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single-build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
