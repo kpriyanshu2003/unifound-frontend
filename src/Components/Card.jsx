@@ -103,9 +103,9 @@ const Card = (props) => {
         <div className="divider"></div>
         <div className="details">
           <div>
-            <div className="heading">Report an item !</div>
+            <div className="heading">Report an item!</div>
             <div className="titleInfo">
-              Enter necessary details related to your item.
+            Add the relevant information about your item.
             </div>
           </div>
           <form method="POST" onSubmit={handleFormSubmit}>

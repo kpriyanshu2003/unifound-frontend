@@ -1,29 +1,31 @@
 .lostCard {
+  /* border: 2px solid red; */
   height: 100%;
   width: 100%;
   background-color: #e7f7ff;
 }
 
 .lostContainerOuter {
+  /* border: 2px solid red; */
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
-  
+  z-index: 100;
 }
 
 .lostContainer {
+  /* border: 5px solid peru; */
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.585) 0px 7px 29px 0px;
-  background-color: rgba(255, 255, 255);
+  background-color: white;
   height: 80%;
-  border-radius: 15px;
+  border-radius: 20px;
   width: 60%;
   display: flex;
   align-items: center;
@@ -31,13 +33,24 @@
 }
 
 .closeIcon {
+  /* border: 2px solid black; */
   position: absolute;
-  right: 25px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
   cursor: pointer;
-  z-index: 999;
 }
+
+.heading {
+  position: relative;
+  font-size: 1.9rem;
+  font-weight: bolder;
+  margin: 12px 0px 12px 0px;
+  color: brown;
+  letter-spacing: 1px;
+}
+
 .uploadImg {
+  /* border: 5px solid purple; */
   display: grid;
   place-items: center;
   width: 50%;
@@ -45,41 +58,54 @@
 }
 
 .divider {
-  background: rgb(60, 60, 60);
+  background: rgb(179, 143, 109);
   width: 0.5px;
   height: 100%;
 }
 
 .details {
+  /* border: 2px solid black; */
   display: grid;
   place-items: center;
   padding: 0 20px;
-  width: 50%;
+  width: 62%;
+  height: 100%;
 }
 
 .details > div {
+  /* border: 2px solid red; */
   width: 100%;
 }
 
 form {
+  /* border: 2px solid seagreen; */
   width: 100%;
-  margin: 15px 0 0 0;
+  height: 100%;
+  /* margin: 15px 0 0 0; */
 }
 
 .inputField {
+  margin-bottom: 20px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
-  width: 90%;
-  height: 20px;
-  padding: 2px;
-  margin: 15px;
-  border: none;
-  background-color: rgba(228, 225, 225, 0.466);
-  border-radius: 5px;
+  box-shadow: inset 3px 2px 5px 0px #d9dbe1, inset -5px -5px 10px white;
+  width: 100%;
+  height: 8%;
+  appearance: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  background-color: #f4f0f0;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.inputField:hover{
+  border-radius: 15px;
 }
 
 .inputField > svg {
-  font-size: larger;
+  font-size: 20px;
+  padding-left: 5px;
 }
 
 .inputField > input {
@@ -93,10 +119,10 @@ form {
 .btnGraphic {
   color: white;
   font-weight: bold;
+  letter-spacing: 1px;
   background: transparent;
-  padding: 10px 10px;
+  padding: 10px 5px;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -104,20 +130,20 @@ form {
   display: flex;
   align-items: center;
   width: fit-content;
-  padding: 0 20px;
+  padding: 0 25px;
   outline: none;
   transition: all 0.5s;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  border-radius: 10px;
-  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
+  border-radius: 9px;
+  background: linear-gradient(90.04deg, rgb(217, 198, 165), rgb(161, 70, 70));
 }
 
 .bg-grad {
-  border-radius: 10px;
+  border-radius: 9px;
   cursor: pointer;
-  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
+  background: linear-gradient(90.04deg, rgb(217, 198, 165), rgb(161, 70, 70));
 }
+
 .submitBtn {
   margin: 10px auto;
   width: 100%;
@@ -137,8 +163,8 @@ form {
   text-indent: 10px;
   border: none;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  color: #757575;
+  font-weight: larger;
+  color: rgb(98, 97, 97);
 }
 
 input::file-selector-button {
@@ -155,14 +181,6 @@ input::file-selector-button {
 input::file-selector-button:hover {
   background-color: rgb(108, 165, 141);
   color: black;
-}
-
-.heading {
-  position: relative;
-  top: 20px;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  font-weight: bolder;
 }
 
 @media only screen and (max-width: 786px) {
