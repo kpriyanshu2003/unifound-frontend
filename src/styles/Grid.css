@@ -1,0 +1,26 @@
+section {
+  display: grid;
+  grid-gap: 1.5px;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(rgb(0, 0, 0), rgb(234, 213, 184), rgb(0, 0, 0));
+  animation: animateGrid 7s linear infinite;
+  outline: none;
+  border: none;
+}
+
+.grid-cell {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+@keyframes animateGrid {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(100%, 100%);
+  }
+}

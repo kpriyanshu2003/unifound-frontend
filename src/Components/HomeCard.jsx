@@ -27,9 +27,8 @@ const HomeCard = () => {
             scale: "1.31",
             filter: "drop-shadow(10px 10px 100px rgb(193, 96, 11))",
           }}
-          />
+        />
       </div>
-
 
       <div className="homeContainer_right">
         <div
@@ -40,7 +39,7 @@ const HomeCard = () => {
             display: "grid",
             placeItems: "center",
           }}
-          >
+        >
           <div
             style={{
               position: "relative",
