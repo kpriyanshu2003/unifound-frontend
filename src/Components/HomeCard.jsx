@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import img from "../assets/l&f.png";
 import "../styles/Home.css";
-// import logoo from "../assets/Logo.png";
+import brand from "../assets/brand.png";
 
 const HomeCard = () => {
   const handleKeyPress = (event) => {
@@ -18,7 +18,6 @@ const HomeCard = () => {
   return (
     <div className="homeContainer">
       <div className="homeContainer_left">
-        {/* <div className="mag"> */}
         <img
           src={img}
           width="100%"
@@ -29,7 +28,6 @@ const HomeCard = () => {
             filter: "drop-shadow(10px 10px 100px rgb(193, 96, 11))",
           }}
         />
-        {/* </div> */}
       </div>
 
       <div className="homeContainer_right">
@@ -38,48 +36,62 @@ const HomeCard = () => {
           className="brand"
           style={{
             // border:'1px solid green',
-            display: "flex",
-            justifyContent: "center",
+            display: "grid",
+            placeItems: "center",
           }}
         >
-          <div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div
+          <div
+            style={{
+              position: "relative",
+              height: "70px",
+              // border: "1px solid green",
+            }}
+          >
+            <img
+              src={brand}
+              alt="Logo"
+              height={50}
+              width={75}
               style={{
-                fontSize: "40px",
-                fontWeight: "bolder",
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                wordSpacing: "2px",
+                // border: "2px solid purple",
+                position: "absolute",
+                bottom: "-13px",
+                left: "50%",
+                transform: "translateX(-55%)",
               }}
-            >
-              Lost to Found
-            </div>
+            />
+          </div>
+          <div
+            style={{
+              fontSize: "40px",
+              // border: "2px solid blue",
+              fontWeight: "bolder",
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+              wordSpacing: "2px",
+            }}
+          >
+            Lost to Found
+          </div>
 
-            <div
-              style={{
-                // border:'2px solid black',
-                textTransform: "uppercase",
-                fontSize: "13px",
-                letterSpacing: "1px",
-                // fontWeight:'400',
-                textAlign: "center",
-              }}
-            >
-              Your treasure awaits you here
-            </div>
+          <div
+            style={{
+              // border:'2px solid black',
+              textTransform: "uppercase",
+              fontSize: "13px",
+              letterSpacing: "1px",
+            }}
+          >
+            Your treasure awaits you here
           </div>
         </div>
         <div id="info">
           A Web application focused on listing lost and found items around the
           college campus.
         </div>
-        {/* <div className="button"> */}
         <Link to="/lost" className="button">
-          <button class="cta">
-            <span class="hover-underline-animation"> Let's get started </span>
+          <button class="btn">
+            <span class="underlineAni"> Let's get started </span>
             <svg
               viewBox="0 0 46 16"
               height="10"
@@ -95,7 +107,6 @@ const HomeCard = () => {
             </svg>
           </button>
         </Link>
-        {/* </div> */}
       </div>
     </div>
   );
