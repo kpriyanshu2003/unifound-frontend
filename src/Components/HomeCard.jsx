@@ -18,7 +18,7 @@ const HomeCard = () => {
   return (
     <div className="homeContainer">
       <div className="homeContainer_left">
-        <img
+        <img id="dog"
           src={img}
           width="100%"
           draggable="false"
@@ -47,7 +47,7 @@ const HomeCard = () => {
               // border: "1px solid green",
             }}
           >
-            <img
+            <img id="logoimg"
               src={brand}
               alt="Logo"
               height={50}
@@ -61,7 +61,7 @@ const HomeCard = () => {
               }}
             />
           </div>
-          <div
+          <div id="ltf"
             style={{
               fontSize: "40px",
               // border: "2px solid blue",

@@ -5,5 +5,4 @@ const Button = (props) => {
     <button className="upload_btn">{props.button}</button>
   )
 }
-
 export default Button
