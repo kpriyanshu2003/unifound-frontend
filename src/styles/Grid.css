@@ -35,3 +35,10 @@ section span {
   height: calc(6.25vw - 1px);
   background: #ffffff;
 }
+
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+  section span{
+    width: calc(16.25vw - 1px);
+    height: calc(16.25vw - 1px);
+  } 
+}
