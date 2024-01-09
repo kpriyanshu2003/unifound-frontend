@@ -11,7 +11,7 @@ const LostPage = () => {
   };
   return (
     <div
-      className="lostCard"
+      className="card-container"
       style={{ overflow: lostState ? "hidden" : "auto" }}
     >
       <NavBar updateItem={updateItem} />

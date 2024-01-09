@@ -12,7 +12,7 @@ const FoundPage = () => {
 
   return (
     <div
-      className="lostCard"
+      className="card-container"
       style={{ overflow: foundState ? "hidden" : "auto" }}
     >
       <NavBar updateItem={updateItem} />

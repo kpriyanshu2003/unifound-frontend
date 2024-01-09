@@ -1,15 +1,15 @@
+import axios from "axios";
+import "../styles/Card.css";
 import React, { useState } from "react";
 import upload from "../assets/gallery.png";
+import { ThreeDots } from "react-loader-spinner";
+import EmailIcon from "@mui/icons-material/Email";
+import TitleIcon from "@mui/icons-material/Title";
 import CloseIcon from "@mui/icons-material/Close";
 import PersonIcon from "@mui/icons-material/Person";
-import TitleIcon from "@mui/icons-material/Title";
-import DescriptionIcon from "@mui/icons-material/Description";
-import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CategoryIcon from "@mui/icons-material/Category";
-import "../styles/Card.css";
-import axios from "axios";
-import { ThreeDots } from "react-loader-spinner";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import DescriptionIcon from "@mui/icons-material/Description";
 
 const Card = (props) => {
   const [spinner, setSpinner] = useState(false);
@@ -99,8 +99,8 @@ const Card = (props) => {
   ];
 
   return (
-    <div className="lostContainerOuter">
-      <div className="lostContainer">
+    <div className="container-outer">
+      <div className="container-inner">
         <div
           className="closeIcon"
           onClick={() => {
