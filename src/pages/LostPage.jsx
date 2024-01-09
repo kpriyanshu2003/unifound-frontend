@@ -9,16 +9,14 @@ const LostPage = () => {
   const updateItem = () => {
     setLostState(!lostState);
   };
-  const page = "LOST";
-
   return (
     <div
-      className="lostCard"
+      className="card-container"
       style={{ overflow: lostState ? "hidden" : "auto" }}
     >
-      <NavBar updateItem={updateItem} section={page} />
+      <NavBar updateItem={updateItem} />
       {lostState && <Card updateItem={updateItem} />}
-      <ListItem section={page} />
+      <ListItem />
     </div>
   );
 };

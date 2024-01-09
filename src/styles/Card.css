@@ -5,7 +5,7 @@
   background-color: rgb(253, 243, 235);
 }
 
-.lostContainerOuter {
+.container-outer {
   /* border: 2px solid red; */
   height: 100vh;
   width: 100vw;
@@ -19,7 +19,7 @@
   z-index: 100;
 }
 
-.lostContainer {
+.container-inner {
   /* border: 5px solid peru; */
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.585) 0px 7px 29px 0px;
@@ -98,7 +98,7 @@ form {
   text-shadow: 1px 1px 0 #fff;
 }
 
-.inputField:hover{
+.inputField:hover {
   border-radius: 15px;
 }
 
@@ -192,8 +192,8 @@ input::file-selector-button:hover {
     padding-bottom: 15px;
   }
 
-  .lostContainer {
-   flex-direction: column;
+  .container-inner {
+    flex-direction: column;
     height: min-content;
     margin-top: 100px;
     padding-top: 60px;
@@ -218,24 +218,20 @@ input::file-selector-button:hover {
   }
 }
 
-
 @media only screen and (max-width: 971px) {
-
-  .lostContainer {
+  .container-inner {
     flex-direction: column;
-     height: min-content;
-     margin-top: 40px;
-     margin-bottom: 40px;
-     padding-top: 60px;
-     padding-bottom: 60px;
-    
-   }
-   .lostContainerOuter {
+    height: min-content;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container-outer {
     height: min-content;
   }
 
-  .details
-  {
+  .details {
     width: 80%;
-  };
+  }
 }

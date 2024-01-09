@@ -1,35 +1,40 @@
-import React, { useState, useEffect } from "react";
-import "../styles/Items.css";
 import Item from "./Item";
+import "../styles/Items.css";
+import { fetchItems } from "../api";
+import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { InfinitySpin } from "react-loader-spinner";
-import axios from "axios";
-const ListItems = (props) => {
+
+const ListItems = () => {
+  const location = useLocation().pathname.substring(1).toUpperCase();
   const [items, setItems] = useState([]);
-  const [spinner, setSpinner] = useState();
-  const lostFoundFetch=async()=>{
-    try{
-      setSpinner(true);
-      const response =await axios.get(`https://finding-nemo.onrender.com/lostItem/getByCategory?category=${props.section}`);
-      console.log(response);
-      setItems(response.data.reverse());
-      setSpinner(false);
-    }catch(error){
-      console.log("Error in fetching data");
-      setSpinner(false);
-    }
-  }
+  const [spinner, setSpinner] = useState(true);
+
   useEffect(() => {
-    lostFoundFetch();
-  }, [props.section]); // eslint-disable-line
-  console.log(items);
+    const fetchData = async () => {
+      try {
+        const response = await fetchItems(location);
+        console.log(response);
+        setItems(response.data.reverse());
+      } catch (error) {
+        console.log("Error in fetching data", error);
+      } finally {
+        setSpinner(false);
+      }
+    };
+
+    fetchData();
+  }, [location]);
   return (
     <div className="container">
       {spinner && <InfinitySpin width="200" color="#019aff" />}
-      {items.map((item) => (
-        <div key={item._id}>
-          <Item key={item._id} data={item} />
-        </div>
-      ))}
+      {items &&
+        items.length > 0 &&
+        items.map((item) => (
+          <div key={item._id}>
+            <Item key={item._id} data={item} />
+          </div>
+        ))}
     </div>
   );
 };

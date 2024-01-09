@@ -9,16 +9,15 @@ const FoundPage = () => {
   const updateItem = () => {
     setFoundState(!foundState);
   };
-  const page = "FOUND";
 
   return (
     <div
-      className="lostCard"
+      className="card-container"
       style={{ overflow: foundState ? "hidden" : "auto" }}
     >
-      <NavBar updateItem={updateItem} section={page} />
+      <NavBar updateItem={updateItem} />
       {foundState && <Card updateItem={updateItem} />}
-      <ListItem section={page} />
+      <ListItem />
     </div>
   );
 };
