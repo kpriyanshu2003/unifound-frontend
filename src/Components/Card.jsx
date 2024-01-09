@@ -1,5 +1,5 @@
-import axios from "axios";
 import "../styles/Card.css";
+import { createItem } from "../api";
 import React, { useState } from "react";
 import upload from "../assets/gallery.png";
 import { ThreeDots } from "react-loader-spinner";
@@ -58,10 +58,7 @@ const Card = (props) => {
     setSpinner(true);
     console.log(formFields);
     try {
-      await axios.post(
-        "https://finding-nemo.onrender.com/lostItem/addLostItem",
-        formFields
-      );
+      await createItem(formFields);
       setSubmitTxt("Submitted");
       setTimeout(() => {
         setSubmitTxt("Submit");
