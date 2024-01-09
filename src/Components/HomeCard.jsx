@@ -16,7 +16,7 @@ const HomeCard = () => {
   return (
     <div className="home-container">
       <div className="home-container-left">
-        <img
+        <img id="dog"
           src={img}
           width="100%"
           draggable="false"
@@ -28,7 +28,7 @@ const HomeCard = () => {
           <div>
             <img id="logoimg" src={brand} alt="Logo" height={50} width={75} />
           </div>
-          <div id="ltf">Lost to Found</div>
+          <div id="ltf">UniFound</div>
           <div>Your treasure awaits you here</div>
         </div>
         <div id="info">

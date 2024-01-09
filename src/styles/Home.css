@@ -27,7 +27,7 @@
 
 .home-container-left > img {
   transform: scale(1.31);
-  filter: "drop-shadow(10px 10px 100px rgb(193, 96, 11))";
+  filter: drop-shadow(5px 0px 60px rgb(199, 111, 35));
 }
 
 .home-container-right {
@@ -99,8 +99,7 @@
   font-size: 40px;
   font-weight: bolder;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  word-spacing: 2px;
+  letter-spacing: 6px;
 }
 
 #logoff > div:last-child {
