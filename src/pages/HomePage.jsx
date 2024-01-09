@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
-import HomeCard from "../Components/HomeCard";
 import Grid from "../Components/Grid";
+import HomeCard from "../Components/HomeCard";
 
 const HomePage = () => {
   return (
