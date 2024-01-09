@@ -4,7 +4,6 @@
   align-items: center;
   padding: 20px 30px;
   box-shadow: #959da533 0px 8px 24px;
-  background-color: rgb(253, 243, 235);
 }
 
 .navBar > div:nth-child(2) {
@@ -32,7 +31,7 @@
   padding-right: 35px;
 }
 
-.navItem:hover {
+.navItem1:hover {
   color: brown;
   scale: 1.1;
   transition: 200ms ease-in-out;
