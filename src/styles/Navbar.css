@@ -10,8 +10,8 @@
 .navBar > div:nth-child(2) {
   display: flex;
   align-items: center;
-  gap: 45px;
-  font-size: 0.85rem;
+  gap: 55px;
+  font-size: 13px;
 }
 
 .title {
@@ -21,11 +21,15 @@
   text-decoration: none;
 }
 
-.navItem {
+.navItem1, .navItem2  {
+  /* border: 2px solid blue; */
   text-decoration: none;
   cursor: pointer;
   color: black;
-  padding-right: 25px;
+}
+
+.navItem2{
+  padding-right: 35px;
 }
 
 .navItem:hover {
@@ -35,10 +39,11 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
 
  .navBar
  {
+  /* border: 2px solid red; */
   font-size:16px;
   flex-direction: column;
  }
@@ -49,6 +54,16 @@
    justify-content: center;
    margin-top: 8px;
    padding-top: 20px;
-   border-top: 1px solid grey;
+   /* border-top: 1px solid grey; */
  }
+
+ .navItem2{
+   /* border: 2px solid blue; */
+   padding-right: 0px;
+   padding-left: 45px;
+}
+
+.navBar > div:nth-child(2) {
+  gap: 30px;
+}
 }

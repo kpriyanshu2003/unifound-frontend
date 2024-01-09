@@ -8,9 +8,9 @@
 
 .homeContainer {
   overflow: hidden;
-  box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   height: 70%;
-  border-radius: 1rem;
+  border-radius: 25px;
   width: 60%;
   display: flex;
   z-index: 1;
@@ -26,7 +26,6 @@
 }
 
 .homeContainer_right {
-  /* border: 2px solid orange; */
   width: 50%;
 }
 
@@ -37,17 +36,16 @@
 }
 
 .btn span {
-  /* border: 2px solid red; */
-  padding-bottom: 0.1rem;
-  letter-spacing: 0.25rem;
-  font-size: 0.8rem;
-  padding-right: 0.9rem;
+  padding-bottom: 5px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 9px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .btn svg {
-  transform: translateX(-0.8rem);
+  transform: translateX(-8px);
   transition: all 0.3s ease;
 }
 
@@ -69,8 +67,8 @@
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 0.1rem;
-  bottom: -0.2rem;
+  height: 1.5px;
+  bottom: 0;
   left: 0;
   background-color: #000000;
   transform-origin: bottom right;
@@ -85,22 +83,30 @@
 #logoff {
   /* border: 2px solid red; */
   display: flex;
-  margin-top: 1.3rem;
+  margin-top: 30px;
 }
 
 #info {
   /* border: 2px solid firebrick; */
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  margin: 2.5rem 0.5rem 0rem 0.5rem;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin: 50px 5px 0px 5px;
 }
 
 .button {
   display: block;
-  margin-top: 2rem;
+  margin-top: 25px;
 }
 
-@media only screen and (max-width: 850px) {
+#logoimg{
+  /* border: 2px solid purple; */
+  position: absolute;
+  bottom: -13px;
+  left: 50;
+  transform: translateX(-55%);
+}
+
+@media only screen and (max-width: 1300px) {
   .homeContainer {
     min-width: 90%;
     min-height: 70%;
@@ -121,28 +127,13 @@
   }
 
   #logoff {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     margin-top: -12px;
   }
 }
 
-@media only screen and (max-width: 475px) {
-  .homeContainer{
-    width: 90%;
-  }
-
-  .homeContainer_left{
-    display: none;
-  }
-
-  .homeContainer_right{
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 760px) {
   .homeContainer{
     width: 90%;
   }
@@ -159,7 +150,7 @@
   #logoff {
     /* border: 2px solid red; */
     display: flex;
-    margin-top: 5px;
+    margin-top: 20px;
   }
 
   #info{
@@ -168,18 +159,19 @@
     letter-spacing: 2px;
     line-height: 25px;
     margin: 50px 5px 0px 5px;
+    padding: 20px;
+    text-align: center;
   }
 
   .btn span {
-    padding-bottom: 5px;
-    letter-spacing: 4px;
-    font-size: 15px;
-    padding-right: 9px;
-    font-weight: bold;
-    text-transform: uppercase;
+    /* border: 2px solid blue; */
+    font-size: 14px;
+    margin-left: 40px;
   }
 
   #logoimg{
     /* border: 2px solid black; */
+    bottom: -6px;
+
   }
 }

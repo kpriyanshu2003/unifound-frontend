@@ -20,19 +20,6 @@ const ListItems = (props) => {
   }
   useEffect(() => {
     lostFoundFetch();
-    // fetch(
-    //   `https://finding-nemo.onrender.com/lostItem/getByCategory?category=${props.section}`
-    // )
-    //   .then(setSpinner(true))
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     setItems(data.reverse());
-    //     setSpinner(false);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error fetching data:", error);
-    //     setSpinner(false);
-    //   });
   }, [props.section]); // eslint-disable-line
   console.log(items);
   return (

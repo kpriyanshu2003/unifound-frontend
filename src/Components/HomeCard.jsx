@@ -53,11 +53,7 @@ const HomeCard = () => {
               height={50}
               width={75}
               style={{
-                // border: "2px solid purple",
-                position: "absolute",
-                bottom: "-13px",
-                left: "50%",
-                transform: "translateX(-55%)",
+            
               }}
             />
           </div>

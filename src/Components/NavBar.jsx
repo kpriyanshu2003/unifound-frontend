@@ -8,19 +8,19 @@ const NavBar = (props) => {
       <Link to="/" className="cursor-pointer title">
         Lost to Found
       </Link>
-      <div>
+      <div className="">
         <Link
           to={props.section !== "LOST" ? "/lost" : "/found"}
           style={{ textDecoration: "none" }}
         >
-          <div className=" navItem ">
+          <div className="navItem1">
             {props.section !== "LOST"
               ? "Lost Something ?"
               : "Found Something ?"}
           </div>
         </Link>
 
-        <div className=" navItem " onClick={() => props.updateItem()}>
+        <div className="navItem2" onClick={() => props.updateItem()}>
           Report an item !
         </div>
       </div>

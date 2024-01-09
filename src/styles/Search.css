@@ -27,7 +27,7 @@
   font-weight: 600;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
   .searchBar {
     width: 80%;
   }
