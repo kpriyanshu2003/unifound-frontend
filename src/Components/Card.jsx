@@ -74,6 +74,30 @@ const Card = (props) => {
     setSpinner(false);
   };
 
+  const formItems = [
+    {
+      icon: <PersonIcon />,
+      name: "studentName",
+      placeholder: "Name",
+    },
+    {
+      icon: <TitleIcon />,
+      name: "itemTitle",
+      placeholder: "Item Name",
+    },
+    {
+      icon: <DescriptionIcon />,
+      name: "itemDescription",
+      placeholder: "Item Description",
+    },
+    { icon: <EmailIcon />, name: "email", placeholder: "Email" },
+    {
+      icon: <LocationOnIcon />,
+      name: "lostLocation",
+      placeholder: "Location",
+    },
+  ];
+
   return (
     <div className="lostContainerOuter">
       <div className="lostContainer">
@@ -105,33 +129,11 @@ const Card = (props) => {
           <div>
             <div className="heading">Report an item!</div>
             <div className="titleInfo">
-            Add the relevant information about your item.
+              Add the relevant information about your item.
             </div>
           </div>
           <form method="POST" onSubmit={handleFormSubmit}>
-            {[
-              {
-                icon: <PersonIcon />,
-                name: "studentName",
-                placeholder: "Name",
-              },
-              {
-                icon: <TitleIcon />,
-                name: "itemTitle",
-                placeholder: "Item Name",
-              },
-              {
-                icon: <DescriptionIcon />,
-                name: "itemDescription",
-                placeholder: "Item Description",
-              },
-              { icon: <EmailIcon />, name: "email", placeholder: "Email" },
-              {
-                icon: <LocationOnIcon />,
-                name: "lostLocation",
-                placeholder: "Location",
-              },
-            ].map((inputField, index) => (
+            {formItems.map((inputField, index) => (
               <div className="inputField" key={index}>
                 {inputField.icon}
                 <input
