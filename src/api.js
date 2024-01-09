@@ -3,7 +3,10 @@ import axios from "axios";
 const API = axios.create({ baseURL: `http://localhost:3300/` });
 
 // fetch by category
-export const auth = (category) => API.get(`/items/?category=${category}`);
+export const fetchItems = (category) =>
+  API.get(
+    `https://finding-nemo.onrender.com/lostItem/getByCategory?category=${category}`
+  );
 
 // fetch by id
 export const fetchItem = (id) => API.get(`/items/${id}`);
