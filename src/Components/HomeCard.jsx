@@ -1,85 +1,35 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-
-import img from "../assets/l&f.png";
 import "../styles/Home.css";
+import img from "../assets/l&f.png";
 import brand from "../assets/brand.png";
+import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 
 const HomeCard = () => {
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") window.location.href = "/lost";
-  };
-
   useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === "Enter") window.location.href = "/lost";
+    };
     document.addEventListener("keydown", handleKeyPress);
     return () => document.removeEventListener("keydown", handleKeyPress);
   }, []);
 
   return (
-    <div className="homeContainer">
-      <div className="homeContainer_left">
-        <img id="dog"
+    <div className="home-container">
+      <div className="home-container-left">
+        <img
           src={img}
           width="100%"
           draggable="false"
           alt="person-searching-something"
-          style={{
-            scale: "1.31",
-            filter: "drop-shadow(10px 10px 100px rgb(193, 96, 11))",
-          }}
         />
       </div>
-
-      <div className="homeContainer_right">
-        <div
-          id="logoff"
-          className="brand"
-          style={{
-            // border:'1px solid green',
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <div
-            style={{
-              position: "relative",
-              height: "70px",
-              // border: "1px solid green",
-            }}
-          >
-            <img id="logoimg"
-              src={brand}
-              alt="Logo"
-              height={50}
-              width={75}
-              style={{
-            
-              }}
-            />
+      <div className="home-container-right">
+        <div id="logoff" className="brand">
+          <div>
+            <img id="logoimg" src={brand} alt="Logo" height={50} width={75} />
           </div>
-          <div id="ltf"
-            style={{
-              fontSize: "40px",
-              // border: "2px solid blue",
-              fontWeight: "bolder",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              wordSpacing: "2px",
-            }}
-          >
-            Lost to Found
-          </div>
-
-          <div
-            style={{
-              // border:'2px solid black',
-              textTransform: "uppercase",
-              fontSize: "13px",
-              letterSpacing: "1px",
-            }}
-          >
-            Your treasure awaits you here
-          </div>
+          <div id="ltf">Lost to Found</div>
+          <div>Your treasure awaits you here</div>
         </div>
         <div id="info">
           A Web application focused on listing lost and found items around the

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import "../styles/Card.css";
 import Card from "../Components/Card";
+import React, { useState } from "react";
 import NavBar from "../Components/NavBar";
 import ListItem from "../Components/ListItem";
 
