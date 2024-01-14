@@ -10,7 +10,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import CategoryIcon from "@mui/icons-material/Category";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DescriptionIcon from "@mui/icons-material/Description";
-import imageCompression from "browser-image-compression";
+// import imageCompression from "browser-image-compression";
 
 const Card = (props) => {
   const [spinner, setSpinner] = useState(false);
