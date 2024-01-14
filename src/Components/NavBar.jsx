@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Navbar.css";
 import { Link, useLocation } from "react-router-dom";
+import Logo from "../assets/brand.png";
 
 const NavBar = (props) => {
   const location = useLocation().pathname;
@@ -8,7 +9,7 @@ const NavBar = (props) => {
   return (
     <div className="navbar-container">
       <Link to="/" className="navbar-title">
-        Lost to Found
+        <img src={Logo} alt="" />
       </Link>
       <div className="navbar-links-container">
         <Link
