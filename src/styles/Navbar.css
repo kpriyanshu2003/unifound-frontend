@@ -2,15 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 10px 30px;
   box-shadow: #959da533 0px 8px 24px;
 }
 
-.navbar-title {
-  font-weight: bold;
-  font-size: 1.7rem;
-  color: brown;
-  text-decoration: none;
+.navbar-title{
+  position: relative;
+}
+
+.navbar-title > img {
+  /* border: 2px solid blueviolet; */
+  height: 45px;
 }
 
 .navbar-links-container {
@@ -40,6 +42,7 @@
 
 @media only screen and (max-width: 760px) {
   .navbar-container {
+    /* border: 2px solid brown; */
     font-size: 16px;
     flex-direction: column;
   }
@@ -47,7 +50,7 @@
   .navbar-links-container {
     width: 100vw;
     justify-content: center;
-    margin-top: 8px;
+    margin-top: -5px;
     padding-top: 20px;
   }
 
