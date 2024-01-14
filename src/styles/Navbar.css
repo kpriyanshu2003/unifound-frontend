@@ -6,7 +6,7 @@
   box-shadow: #959da533 0px 8px 24px;
 }
 
-.navbar-title{
+.navbar-title {
   position: relative;
 }
 
@@ -36,8 +36,7 @@
 .navbar-item:hover,
 .navbar-report-item:hover {
   color: brown;
-  transition: all 0.2s ease-in-out;
-  scale: 1.04;
+  transition: color 300ms ease-in-out;
 }
 
 @media only screen and (max-width: 760px) {
