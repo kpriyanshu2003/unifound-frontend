@@ -4,6 +4,7 @@
   align-items: center;
   padding: 10px 30px;
   box-shadow: #959da533 0px 8px 24px;
+  background-color: rgb(242, 236, 236);
 }
 
 .navbar-title {
@@ -36,7 +37,7 @@
 .navbar-item:hover,
 .navbar-report-item:hover {
   color: brown;
-  transition: color 300ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 
 @media only screen and (max-width: 760px) {
