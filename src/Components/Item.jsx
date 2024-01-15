@@ -1,17 +1,21 @@
 import React from "react";
 import "../styles/Items.css";
-import DescriptionIcon from "@mui/icons-material/Description";
 import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CategoryIcon from "@mui/icons-material/Category";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import DescriptionIcon from "@mui/icons-material/Description";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-// import LinkIcon from "@mui/icons-material/Link";
 
 const ListItem = (props) => {
   return (
     <div className="itemContainer">
       <div className="itemImageContainer">
-        <img src={props.data.image} alt="" width="100%" />
+        <img
+          src={`${process.env.REACT_APP_API_URL}/images/${props.data.fileId}`}
+          alt=""
+          width="100%"
+        />
       </div>
       <div className="innerContainer">
         <div>
@@ -32,10 +36,16 @@ const ListItem = (props) => {
         <div>
           <EmailIcon style={{ fontSize: "medium" }} />
           <a href={`mailto:${props.data.email}`}>{props.data.email}</a>
+          <ContentCopyIcon
+            className="copyIcon"
+            onClick={() => {
+              navigator.clipboard.writeText(props.data.email);
+            }}
+          />
         </div>
         <div>
           <LocationOnIcon style={{ fontSize: "medium" }} />
-          <span>{props.data.lostLocation}</span>
+          <span>{props.data.location}</span>
         </div>
         <div
           className="category"

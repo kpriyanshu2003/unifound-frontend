@@ -81,8 +81,15 @@
   font-weight: bold;
   cursor: pointer;
 }
-.mail-link{
+.mail-link {
   margin-bottom: -0.5rem;
+}
+
+.noItem {
+  margin-top: 60px;
+  font-size: 1.5rem;
+  font-family: monospace;
+  color: gray;
 }
 
 @media only screen and (max-width: 768px) {
@@ -112,4 +119,10 @@
   .category {
     margin: 15px 0;
   }
+}
+
+.copyIcon {
+  cursor: pointer;
+  margin-top: 5px;
+  cursor: pointer;
 }

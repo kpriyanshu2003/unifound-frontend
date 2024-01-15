@@ -10,65 +10,80 @@ import PersonIcon from "@mui/icons-material/Person";
 import CategoryIcon from "@mui/icons-material/Category";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DescriptionIcon from "@mui/icons-material/Description";
+// import imageCompression from "browser-image-compression";
 
 const Card = (props) => {
   const [spinner, setSpinner] = useState(false);
   const [submitTxt, setSubmitTxt] = useState("Submit");
   const [formFields, setFormFields] = useState({
-    image: upload,
+    fileInput: null,
+    imagePreview: upload,
     studentName: "",
     itemTitle: "",
     itemDescription: "",
     email: "",
-    lostLocation: "",
+    location: "",
     category: "",
   });
 
-  const handleImage = async (event) => {
+  const handleImage = (event) => {
     const file = event.target.files[0];
     if (file) {
-      const base64 = await convertToBase64(file);
+      const imageUrl = URL.createObjectURL(file);
       setFormFields((prevFields) => ({
         ...prevFields,
-        image: base64,
+        fileInput: file,
+        imagePreview: imageUrl,
       }));
     } else
       setFormFields((prevFields) => ({
         ...prevFields,
-        image: upload,
+        fileInput: null,
+        imagePreview: upload,
       }));
   };
 
   const handleFieldChange = (event) => {
     const { name, value } = event.target;
-    setFormFields((prevFields) => ({
-      ...prevFields,
-      [name]: value,
-    }));
+    if (name === "fileInput") handleImage(event);
+    else
+      setFormFields((prevFields) => ({
+        ...prevFields,
+        [name]: value,
+      }));
   };
 
-  const handleFormSubmit = async (event) => {
+  const prepareFormData = () => {
+    const formData = new FormData();
+    formData.append("file", formFields.fileInput);
+    formData.append("studentName", formFields.studentName);
+    formData.append("itemTitle", formFields.itemTitle);
+    formData.append("itemDescription", formFields.itemDescription);
+    formData.append("email", formFields.email);
+    formData.append("location", formFields.location);
+    formData.append("category", formFields.category);
+    return formData;
+  };
+
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-
-    if (!formFields.image) {
-      alert("Invalid Image");
-      return;
-    }
-
     setSpinner(true);
-    console.log(formFields);
-    try {
-      await createItem(formFields);
-      setSubmitTxt("Submitted");
-      setTimeout(() => {
-        setSubmitTxt("Submit");
-        window.location.href = formFields.category;
-      }, 1500);
-    } catch (error) {
-      console.error("Error:", error);
-      setSubmitTxt("Retry");
-    }
-    setSpinner(false);
+    setSubmitTxt("Submitting");
+    const formData = prepareFormData();
+    createItem(formData)
+      .then((res) => {
+        setSpinner(false);
+        console.log(res);
+        setSubmitTxt("Submitted");
+        setTimeout(() => {
+          window.location.href = formFields.category;
+        }, 2000);
+      })
+      .catch((err) => {
+        console.log(err);
+        setSubmitTxt("Retry");
+        setSpinner(false);
+      });
   };
 
   const formItems = [
@@ -76,22 +91,26 @@ const Card = (props) => {
       icon: <PersonIcon />,
       name: "studentName",
       placeholder: "Name",
+      type: "text",
     },
     {
       icon: <TitleIcon />,
       name: "itemTitle",
       placeholder: "Item Name",
+      type: "text",
     },
     {
       icon: <DescriptionIcon />,
       name: "itemDescription",
       placeholder: "Item Description",
+      type: "text",
     },
-    { icon: <EmailIcon />, name: "email", placeholder: "Email" },
+    { icon: <EmailIcon />, name: "email", placeholder: "Email", type: "email" },
     {
       icon: <LocationOnIcon />,
-      name: "lostLocation",
+      name: "location",
       placeholder: "Location",
+      type: "text",
     },
   ];
 
@@ -108,11 +127,16 @@ const Card = (props) => {
         </div>
         <div className="uploadImg">
           <div></div>
-          <img src={formFields.image} alt="logo" width={100} id="imager" />
+          <img
+            src={formFields.imagePreview}
+            alt="logo"
+            id="image"
+            style={{ width: "80%" }}
+          />
           <div className="uploadImgInput">
             <input
               type="file"
-              name=""
+              name="fileInput"
               id=""
               accept="image/*"
               className="btnGraphic fileInput bg-grad"
@@ -134,7 +158,7 @@ const Card = (props) => {
               <div className="inputField" key={index}>
                 {inputField.icon}
                 <input
-                  type="text"
+                  type={inputField.type}
                   name={inputField.name}
                   placeholder={inputField.placeholder}
                   value={formFields[inputField.name]}
@@ -142,7 +166,6 @@ const Card = (props) => {
                 />
               </div>
             ))}
-
             <div className="inputField">
               <CategoryIcon />
               <select
@@ -181,15 +204,26 @@ const Card = (props) => {
 
 export default Card;
 
-function convertToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
-    fileReader.onload = () => {
-      resolve(fileReader.result);
-    };
-    fileReader.onerror = (error) => {
-      reject(error);
-    };
-  });
-}
+// async function handleImageUpload(imageFile) {
+//   // const imageFile = event.target.files[0];
+//   console.log("originalFile instanceof Blob", imageFile instanceof Blob); // true
+//   console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
+
+//   const options = {
+//     maxSizeMB: 1,
+//     useWebWorker: true,
+//   };
+//   try {
+//     const compressedFile = await imageCompression(imageFile, options);
+//     console.log(
+//       "compressedFile instanceof Blob",
+//       compressedFile instanceof Blob
+//     ); // true
+//     console.log(`compressedFile size ${compressedFile.size / 1024 / 1024} MB`); // smaller than maxSizeMB
+
+//     // await uploadToServer(compressedFile); // write your own logic
+//     return compressedFile;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }

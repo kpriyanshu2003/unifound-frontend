@@ -11,30 +11,32 @@ const ListItems = () => {
   const [spinner, setSpinner] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetchItems(location);
-        console.log(response);
+    setSpinner(true);
+    fetchItems(location)
+      .then((response) => {
+        console.log(response.data);
         setItems(response.data.reverse());
-      } catch (error) {
-        console.log("Error in fetching data", error);
-      } finally {
         setSpinner(false);
-      }
-    };
-
-    fetchData();
+      })
+      .catch((error) => {
+        console.log("Error in fetching data", error);
+        setSpinner(false);
+      });
   }, [location]);
+
   return (
     <div className="container">
-      {spinner && <InfinitySpin width="200" color="#019aff" />}
-      {items &&
-        items.length > 0 &&
+      {spinner ? (
+        <InfinitySpin width="200" color="#019aff" />
+      ) : items.length === 0 ? (
+        <h1 className="noItem">No items found</h1>
+      ) : (
         items.map((item) => (
           <div key={item._id}>
             <Item key={item._id} data={item} />
           </div>
-        ))}
+        ))
+      )}
     </div>
   );
 };
