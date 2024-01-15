@@ -16,7 +16,8 @@ const HomeCard = () => {
   return (
     <div className="home-container">
       <div className="home-container-left">
-        <img id="dog"
+        <img
+          id="dog"
           src={img}
           width="100%"
           draggable="false"
@@ -41,7 +42,7 @@ const HomeCard = () => {
             <svg
               viewBox="0 0 46 16"
               height="10"
-              width="30"
+              width="60"
               id="arrow-horizontal"
             >
               <path
