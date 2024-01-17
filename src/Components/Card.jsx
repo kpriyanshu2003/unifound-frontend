@@ -76,7 +76,7 @@ const Card = (props) => {
         console.log(res);
         setSubmitTxt("Submitted");
         setTimeout(() => {
-          window.location.href = formFields.category;
+          window.location.href = formFields.category.toLowerCase();
         }, 2000);
       })
       .catch((err) => {
