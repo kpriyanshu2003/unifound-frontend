@@ -141,7 +141,7 @@
 
   #info{
     /* border: 2px solid black; */
-    margin: 45px 0px 0px 10px;
+    margin: 65px 0px 0px 10px;
   }
 
   #logoff{
@@ -151,7 +151,8 @@
 
   .btn{
     /* border: 2px solid salmon; */
-    margin-top: 23px;
+    margin-top: 50px;
+    width: 100%;
   }
 }
 
