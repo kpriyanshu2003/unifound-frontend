@@ -9,9 +9,10 @@
   /* border: 2px solid red; */
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
+  overflow: auto;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -20,16 +21,12 @@
 }
 
 .container-inner {
-  /* border: 5px solid peru; */
+  /* border: 4px solid peru; */
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.585) 0px 7px 29px 0px;
   background-color: white;
-  height: 80%;
   border-radius: 20px;
-  width: 60%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .closeIcon {
@@ -41,10 +38,10 @@
 }
 
 .heading {
-  position: relative;
+  /* position: relative; */
   font-size: 1.9rem;
   font-weight: bolder;
-  margin: 12px 0px 12px 0px;
+  margin: 20px 0px 10px 0px;
   color: brown;
   letter-spacing: 1px;
 }
@@ -53,14 +50,12 @@
   /* border: 5px solid purple; */
   display: grid;
   place-items: center;
-  width: 50%;
-  height: 100%;
+  width: 46%;
 }
 
 .divider {
   background: rgb(179, 143, 109);
-  width: 0.499px;
-  height: 100%;
+  width: 0.4px;
 }
 
 .details {
@@ -68,11 +63,10 @@
   display: grid;
   place-items: center;
   padding: 0 20px;
-  width: 62%;
-  height: 100%;
+  width: 64%;
 }
 
-.details > div {
+.details>div {
   /* border: 2px solid red; */
   width: 100%;
 }
@@ -80,19 +74,14 @@
 form {
   /* border: 2px solid seagreen; */
   width: 100%;
-  height: 100%;
-  /* margin: 15px 0 0 0; */
 }
 
 .inputField {
   margin-bottom: 20px;
-  border-radius: 7px;
+  border-radius: 8px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 8%;
-  appearance: none;
-  box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   background-color: #f4f0f0;
   text-shadow: 1px 1px 0 #fff;
@@ -102,13 +91,12 @@ form {
   border-radius: 15px;
 }
 
-.inputField > svg {
+.inputField>svg {
   font-size: 20px;
   padding-left: 5px;
 }
 
-.inputField > input {
-  width: 100%;
+.inputField>input {
   border: none;
   outline: none;
   background: transparent;
@@ -126,11 +114,7 @@ form {
 }
 
 .btnOuter {
-  display: flex;
-  align-items: center;
-  width: fit-content;
   padding: 0 25px;
-  outline: none;
   transition: all 0.5s;
   cursor: pointer;
   border-radius: 9px;
@@ -145,7 +129,7 @@ form {
 
 .submitBtn {
   /* border: 2px solid blue; */
-  margin: 10px auto;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
 }
@@ -156,19 +140,14 @@ form {
 
 .select {
   width: 100%;
-  outline: none;
   background: transparent;
-  padding: 8px;
+  padding: 2px;
   text-indent: 10px;
   border: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: larger;
   color: rgb(98, 97, 97);
 }
 
 input::file-selector-button {
-  border: none;
-  outline: none;
   border-radius: 5px;
   background: transparent;
   border: 1px solid white;
@@ -181,9 +160,22 @@ input::file-selector-button:hover {
   color: rgb(242, 240, 237);
 }
 
+#image {
+  width: 60%;
+  margin-top: 20px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
 @media only screen and (max-width: 760px) {
-  .heading {
-    font-size: 1.8rem;
+  .details {
+    /* border: 2px solid rebeccapurple; */
+    width: 90%;
+    text-align: center;
+  }
+
+  .divider {
+    display: none;
   }
 
   .titleInfo {
@@ -192,46 +184,45 @@ input::file-selector-button:hover {
     padding-bottom: 15px;
   }
 
+  .container-outer {
+    background: #fff;
+  }
+
   .container-inner {
-    flex-direction: column;
-    height: min-content;
-    margin-top: 100px;
-    padding-top: 60px;
-    width: 90vw;
-  }
-
-  .fileInput {
     /* border: 2px solid red; */
-    width: 150%;
-    padding: 6px;
+    box-shadow: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
 
-  .btnOuter{
-    padding: 0px 15px 0px 15px;
+  .bg-grad {
+    margin-top: 40px;
+    width: 60vw;
+  }
+
+  .btnOuter {
+    padding: 0px 15px;
   }
 
   .uploadImgInput {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* border: 2px solid red; */
+    width: 100%;
   }
-}
 
-@media only screen and (max-width: 971px) {
-  .container-inner {
-    flex-direction: column;
-    height: min-content;
+  #image {
+    /* border: 2px solid blue; */
+    width: 60%;
+    margin: 0px;
+  }
+
+  .uploadImg {
+    /* border: 2px solid brown; */
+    display: grid;
+    place-content: center;
+    height: 300px;
     margin-top: 40px;
-    margin-bottom: 40px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .container-outer {
-    height: min-content;
-  }
-
-  .details {
-    width: 80%;
   }
 }
