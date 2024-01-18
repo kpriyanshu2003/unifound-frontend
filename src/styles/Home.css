@@ -124,22 +124,35 @@
 
 @media only screen and (max-width: 1200px) {
   .home-container {
-    min-width: 90%;
+    min-width: 82%;
     min-height: 70%;
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
   .home-container-left {
-    width: 50%;
+    /* border: 2px solid palegreen; */
+    width: 40%;
   }
 
-  .home-container-left > img {
+  .home-container-right{
+    /* border: 2px solid brown; */
+    width: 60%;
+  }
+
+  #info{
+    /* border: 2px solid black; */
+    margin: 65px 0px 0px 10px;
+  }
+
+  #logoff{
+    /* border: 2px solid darkblue; */
+    margin-top: 0px;
+  }
+
+  .btn{
+    /* border: 2px solid salmon; */
+    margin-top: 50px;
     width: 100%;
-  }
-
-  .home-container {
-    width: 50%;
-    flex-direction: column;
   }
 }
 
